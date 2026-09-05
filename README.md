@@ -61,7 +61,7 @@ The Extended Kahraman dataset was introduced by Hoffmann et al. as an extension 
 
 Relevant papers:
 
-- Kahraman et al. (2007), ligand binding-site shape comparison.
+- Kahraman, Abdullah, et al. "Shape variation in protein binding pockets and their ligands." Journal of molecular biology 368.1 (2007): 283-301.
 - Hoffmann et al. (2010), *A new protein binding pocket similarity measure based on comparison of clouds of atoms in 3D: application to ligand prediction*: https://pmc.ncbi.nlm.nih.gov/articles/PMC2838872/
 
 The EK structures are PDB-derived. The cleaned repository expects the processed EK protein files under:
@@ -78,11 +78,13 @@ data/cache/EK_raw_ILR_CDPA_thr4p8_20p0_by0p1.rds
 
 ### TOUGH-C1 Dataset
 
-TOUGH-C1 is an established ligand binding-site classification benchmark from the Brylinski laboratory.
+TOUGH-C1 is an established ligand binding-site classification benchmark introduced in DeepDrug3D paper.
 
-Dataset page:
+Relevant paper:
 
-- https://www.brylinski.org/tough-c1
+- Pu, Limeng, et al. "DeepDrug3D: classification of ligand-binding pockets in proteins with a convolutional neural network." PLoS computational biology 15.2 (2019): e1006718.
+Data set :
+- https://osf.io/enz69/
 
 The repository includes the processed protein-ligand pair object used by the final TOUGH-C1 nested cross-validation script:
 
