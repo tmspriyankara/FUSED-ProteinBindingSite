@@ -1,0 +1,4 @@
+"model","selection_rule","n_repeats","n_outer_evals","mean_outer_accuracy","sd_outer_accuracy","mean_selected_t_end","sd_selected_t_end","mean_selected_log10_lambda","sd_selected_log10_lambda","mean_selected_log10_eps","sd_selected_log10_eps"
+"RF","max_inner_accuracy",5,25,0.777955144949583,0.0203311158056341,10.72,2.37205958328763,NA,NA,NA,NA
+"MultinomialLasso","max_inner_accuracy",5,25,0.777323585233236,0.0232292812842958,12.16,2.82370914460632,-3.44,0.396071241045773,NA,NA
+"Mahalanobis","max_inner_accuracy",5,25,0.617055938435938,0.0327163897346125,7,0.577350269189626,NA,NA,-6,0

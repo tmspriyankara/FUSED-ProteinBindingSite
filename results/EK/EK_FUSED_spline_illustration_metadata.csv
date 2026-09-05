@@ -1,0 +1,2 @@
+"dataset","selection_method","selected_site_index","selected_ligand_group","selected_pdb_file","t_start","t_end","t_step","n_thresholds","spline_degree","nbasis","smoothing_lambda"
+"Extended Kahraman","representative_within_SITE_LABEL_HEM",450,"HEM","data/Extended Kahraman Proteins Sorted/HEM/2g5g.pdb",4.8,20,0.1,153,3,31,0.001

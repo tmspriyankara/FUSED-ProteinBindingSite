@@ -1,0 +1,2 @@
+"dataset","ligand_group","n_amp_sites","t_start","t_end","t_step","n_thresholds","spline_degree","nbasis","smoothing_lambda","ilr_scaling_applied","ilr1_figure_file","c12_figure_file"
+"Extended Kahraman","AMP",60,4.8,20,0.1,153,3,31,0.001,FALSE,"results/RR/AMP_ILR1_curves.png","results/RR/AMP_c12_curves.png"

@@ -1,0 +1,5 @@
+.DS_Store
+
+# Generated from TOUGHM1_raw_ILR_CDPA_thr4p8_15p0_by0p1.rds.
+# This CSV is slightly above GitHub's normal 100 MB file limit.
+data/cache/TOUGHM1_rawFUSED_features_thr4p8_15p0.csv

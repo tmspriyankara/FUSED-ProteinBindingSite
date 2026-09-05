@@ -1,0 +1,2 @@
+"dataset","t_start","t_end","t_step","n_thresholds","n_sites","spline_degree","nbasis","smoothing_lambda","ilr_scaling_applied","output_directory"
+"Extended Kahraman",4.8,20,0.1,153,904,3,31,0.001,FALSE,"results/RR"

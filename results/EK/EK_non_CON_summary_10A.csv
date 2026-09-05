@@ -1,0 +1,2 @@
+"threshold","n_sites","n_sites_with_any_non_CON","pct_sites_with_any_non_CON","mean_pct_non_CON","min_pct_non_CON","q1_pct_non_CON","median_pct_non_CON","q3_pct_non_CON","max_pct_non_CON"
+10,904,606,67.0353982300885,0.481799254264796,0,0,0.413508121972072,0.72992700729927,3.37837837837838
