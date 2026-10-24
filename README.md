@@ -207,6 +207,20 @@ Rscript scripts/TOUGH-M1/TOUGHM1_Export_RawFUSED_FeatureMatrix_thr4p8_15p0.R
 
 ### TOUGH-M1 Pairwise Pocket-Matching Analysis
 
+The exact pocket assignments for the 20 reported splits are available in
+[`scripts/TOUGH-M1/folds/TOUGHM1_FUSED_exact_20_split_assignments.csv`](scripts/TOUGH-M1/folds/TOUGHM1_FUSED_exact_20_split_assignments.csv).
+Each row records the split number, pocket ID (`code5`), RCSB 30%
+sequence-identity cluster, and partition (`fit`, `validation`, or `test`).
+The assignments cover all 7,447 pockets in each split; fitting and validation
+together form the outer-training partition. Sequence clusters do not cross
+partitions within a split. Pocket counts are listed in
+[`TOUGHM1_FUSED_exact_20_split_summary.csv`](scripts/TOUGH-M1/folds/TOUGHM1_FUSED_exact_20_split_summary.csv).
+Only pairs whose two pockets belong to the same partition are used in that
+partition. The analysis script below regenerates these assignments from the
+cached feature order and sequence-cluster mapping using the fixed seeds;
+it does not read the assignment CSV. The 7,429-pocket CNN comparison retains
+these assignments after excluding the 18 pockets with unavailable inputs.
+
 ```bash
 python3 scripts/TOUGH-M1/TOUGHM1_FUSED_GroupShuffleSplit_TuneTmax_8_10_12_15.py
 ```
