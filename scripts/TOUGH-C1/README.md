@@ -21,31 +21,9 @@ and `results/TOUGH-C1/threeclass_full4002/all_classifiers/`.
 The cached input is `data/cache/TOUGH_C1_LBS_ligand_ILR_CDPA_to20A.rds`.
 The saved outer-fold CSV in `folds/` preserves the assignments used in the
 DeepDrug3D comparison: each pocket is tested once in each of five repeats.
-These are stratified random pocket splits, not protein-independent or
-sequence-cluster-grouped splits.
 
-## Model Selection and Evaluation
 
-- Five repeated 5-fold outer CV gives 25 held-out evaluations per model.
-- Inner stratified 5-fold CV maximizes mean three-class accuracy.
-- The lower endpoint is 4 A; candidate upper endpoints are 6 through 20 A
-  in steps of 1 A, using descriptors sampled every 0.1 A.
-- Smoothing uses cubic B-splines and penalty 0.001. MFPCA uses training-only
-  centering/scaling and retains 95% of variation, capped at 20 components.
-- RF uses 400 trees, square-root `mtry`, and selects minimum node size
-  from 2, 5, and 7.
-- MLR-l1 uses multinomial `glmnet` with alpha 1 and ten log-spaced lambda
-  candidates from 0.01 to 0.0001.
-- NMM uses nearest Mahalanobis means with covariance ridge 0.000001.
-- Final models are refitted on the complete outer-training fold.
 
-Accuracy, PPV, TPR, and TNR recode the predicted three-class label as
-target class versus other classes. Thus a CONTROL prediction is negative
-for both HEME and NUC, even if either target probability exceeds another
-non-winning probability. RF and MLR-l1 assign the class with highest
-probability, using the first class on exact ties. AUC (ROC-AUC) uses the
-target-class probability for RF/MLR-l1 and negative squared Mahalanobis
-distance to the target mean for NMM. AUC gives half credit to tied scores.
 
 ## Common Cohort: 4,000 Pockets
 
