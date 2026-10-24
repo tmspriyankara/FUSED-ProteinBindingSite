@@ -173,15 +173,22 @@ Rscript scripts/EK/ExtendedKahraman_RepeatedNestedCV_TuneTend_MaxInner_to20A_by1
 
 ### TOUGH-C1 Nested Cross-Validation
 
-```bash
-Rscript scripts/TOUGH-C1/TOUGHC1_RepeatedNestedCV_TuneTend_MaxInner_to20A_by1p0_parallel_Resumable.R
-```
-
-To force a complete rerun from scratch:
+The resubmitted analysis fits three-class models (CONTROL, HEME, NUC), then
+reports class-specific performance for HEME and NUC against the remaining
+classes. Run RF first, then multinomial lasso and NMM:
 
 ```bash
-RR_START_FROM_SCRATCH=1 Rscript scripts/TOUGH-C1/TOUGHC1_RepeatedNestedCV_TuneTend_MaxInner_to20A_by1p0_parallel_Resumable.R
+Rscript scripts/TOUGH-C1/TOUGHC1_RF_ThreeClass_RepeatedNestedCV.R
+Rscript scripts/TOUGH-C1/TOUGHC1_MLR_NMM_ThreeClass_RepeatedNestedCV.R
 ```
+
+These scripts use the saved five repeated 5-fold outer assignments, with
+5-fold inner selection based on three-class accuracy. Generated outputs are
+saved under `results/TOUGH-C1/threeclass_full4002/`. Reference results from
+the submitted analysis are in `results/TOUGH-C1/threeclass_reference/full4002/`.
+
+See [the TOUGH-C1 instructions](scripts/TOUGH-C1/README.md) for settings,
+resumption, input audits, and the 4,000-pocket comparison cohort.
 
 ### TOUGH-M1 Sequence-Cluster Mapping
 
@@ -221,7 +228,7 @@ Additional EK scripts reproduce feature-set comparisons, smoothing sensitivity, 
 scripts/EK/
 ```
 
-Additional TOUGH-C1 scripts reproduce sulfur and element-composition sensitivity analyses:
+Additional TOUGH-C1 scripts support data preparation and element-composition auditing:
 
 ```text
 scripts/TOUGH-C1/

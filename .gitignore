@@ -1,4 +1,18 @@
 .DS_Store
+.venv/
+**/__pycache__/
+*.pyc
+/Rplots.pdf
+
+# Regenerated three-class outputs and checkpoints (reference CSVs are retained).
+/results/TOUGH-C1/threeclass_full4002/
+/results/TOUGH-C1/threeclass_common4000/
+
+# Local-only TOUGH-C1 analyses, excluded from the publication code release.
+/scripts/TOUGH-C1/TOUGHC1_RepeatedNestedCV_TuneTend_MaxInner_to20A_by1p0_parallel_Resumable.R
+/scripts/TOUGH-C1/TOUGHC1_SulfurSensitivity_FixedTend10_RepeatedCV.R
+/results/TOUGH-C1/TOUGHC1_repeatedNestedCV_MaxInner_to20A_by1p0_parallel_Resumable_*.csv
+/results/TOUGH-C1/TOUGHC1_sulfurSensitivity_fixedTend10_repeated20x5_*.csv
 
 # Generated from TOUGHM1_raw_ILR_CDPA_thr4p8_15p0_by0p1.rds.
 # This CSV is slightly above GitHub's normal 100 MB file limit.
