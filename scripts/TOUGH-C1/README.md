@@ -1,6 +1,6 @@
 # TOUGH-C1 Three-Class Classification
 
-The resubmitted manuscript trains each FUSED classifier on CONTROL, HEME,
+We train each FUSED classifier on CONTROL, HEME,
 and NUC together. HEME and NUC metrics are then calculated separately
 against the remaining classes.
 
