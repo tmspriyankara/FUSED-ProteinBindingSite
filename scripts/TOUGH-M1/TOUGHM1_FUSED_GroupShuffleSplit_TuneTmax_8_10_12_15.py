@@ -2,16 +2,7 @@
 """
 TOUGH-M1 | Group-based train/test evaluation with training-only t_max selection
 
-- Uses raw FUSED curve coordinates exported over [4.8, 15.0] A.
-- Uses RCSB 30% sequence-identity clusters as split groups.
-- Uses 20 repeated random 80/20 train/test splits at the cluster level.
-- Inside each outer training split, creates a cluster-level validation split.
-- Selects t_max from {8, 10, 12, 15} A using validation AUC only.
-- Evaluates the selected interval once on held-out test pairs.
-- Runs both:
-    1) direct split-fitted MFPC-FUSED similarity
-    2) supervised Siamese FUSED model with |z_i-z_j|, z_i*z_j, cosine
-- Resumable: completed split rows are skipped unless OVERWRITE=1 is set.
+
 """
 
 from __future__ import annotations
