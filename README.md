@@ -1,6 +1,6 @@
 # FUSED: A Functional Representation for Joint Structural and Elemental Analysis of Protein Ligand Binding Sites
 
-This repository contains the code, cached inputs, selected results, and figures used for the FUSED. FUSED represents each binding site as a threshold-dependent functional descriptor combining structural and  compositional features.
+This repository contains the code, cached inputs, results, and figures used for the FUSED. FUSED represents each binding site as a threshold-dependent functional descriptor combining structural and  compositional features.
 
 The repository is organized so that the main analyses can be rerun from cached descriptor objects, while raw structure data can be downloaded separately when full descriptor reconstruction is desired.
 
@@ -173,8 +173,8 @@ Rscript scripts/EK/ExtendedKahraman_RepeatedNestedCV_TuneTend_MaxInner_to20A_by1
 
 ### TOUGH-C1 Nested Cross-Validation
 
-The resubmitted analysis fits three-class models (CONTROL, HEME, NUC), then
-reports class-specific performance for HEME and NUC against the remaining
+We fit three-class models (CONTROL, HEME, NUC), then
+report class-specific performance for HEME and NUC against the remaining
 classes. Run RF first, then multinomial lasso and NMM:
 
 ```bash
@@ -182,13 +182,10 @@ Rscript scripts/TOUGH-C1/TOUGHC1_RF_ThreeClass_RepeatedNestedCV.R
 Rscript scripts/TOUGH-C1/TOUGHC1_MLR_NMM_ThreeClass_RepeatedNestedCV.R
 ```
 
-These scripts use the saved five repeated 5-fold outer assignments, with
-5-fold inner selection based on three-class accuracy. Generated outputs are
-saved under `results/TOUGH-C1/threeclass_full4002/`. Reference results from
+Generated outputs are saved under `results/TOUGH-C1/threeclass_full4002/`. Reference results from
 the submitted analysis are in `results/TOUGH-C1/threeclass_reference/full4002/`.
 
-See [the TOUGH-C1 instructions](scripts/TOUGH-C1/README.md) for settings,
-resumption, input audits, and the 4,000-pocket comparison cohort.
+
 
 ### TOUGH-M1 Sequence-Cluster Mapping
 
@@ -220,19 +217,7 @@ The TOUGH-M1 script is resumable. If all splits have already been completed, it 
 OVERWRITE=1 python3 scripts/TOUGH-M1/TOUGHM1_FUSED_GroupShuffleSplit_TuneTmax_8_10_12_15.py
 ```
 
-## Supporting Analyses
 
-Additional EK scripts reproduce feature-set comparisons, smoothing sensitivity, variance-retention sensitivity, sulfur sensitivity, and exploratory figures:
-
-```text
-scripts/EK/
-```
-
-Additional TOUGH-C1 scripts support data preparation and element-composition auditing:
-
-```text
-scripts/TOUGH-C1/
-```
 
 Outputs are written to:
 
