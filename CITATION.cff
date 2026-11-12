@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use FUSED or this code in your research, please cite the paper below."
+title: "FUSED: A Functional Representation for Joint Structural and Elemental Analysis of Protein-Ligand Binding Sites"
+type: software
+authors:
+  - family-names: Priyankara
+    given-names: T. M. Sajith
+  - family-names: Ellingson
+    given-names: Leif
+    orcid: "https://orcid.org/0000-0003-0474-0383"
+repository-code: "https://github.com/tmspriyankara/FUSED-ProteinBindingSite"
+preferred-citation:
+  type: article
+  title: "FUSED: A Functional Representation for Joint Structural and Elemental Analysis of Protein-Ligand Binding Sites"
+  authors:
+    - family-names: Priyankara
+      given-names: T. M. Sajith
+    - family-names: Ellingson
+      given-names: Leif
+      orcid: "https://orcid.org/0000-0003-0474-0383"
+  journal: "Journal of Chemical Information and Modeling"
+  year: 2026
+  month: 11
+  doi: "10.1021/acs.jcim.6c03105"
+  url: "https://doi.org/10.1021/acs.jcim.6c03105"

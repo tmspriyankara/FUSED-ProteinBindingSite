@@ -4,6 +4,20 @@ This repository contains the code, cached inputs, results, and figures used for 
 
 The repository is organized so that the main analyses can be rerun from cached descriptor objects, while raw structure data can be downloaded separately when full descriptor reconstruction is desired.
 
+<p align="center">
+  <a href="https://doi.org/10.1021/acs.jcim.6c03105">
+    <img src="figures/FUSED_graphical_abstract.png" width="800" alt="FUSED represents binding-site structure and elemental composition as functions of distance threshold for classification and pocket matching.">
+  </a>
+</p>
+
+## Citation
+
+If you use FUSED or this code in your research, please cite:
+
+Priyankara, T. M. S.; Ellingson, L. FUSED: A Functional Representation for Joint Structural and Elemental Analysis of Protein-Ligand Binding Sites. *Journal of Chemical Information and Modeling* **2026**. [https://doi.org/10.1021/acs.jcim.6c03105](https://doi.org/10.1021/acs.jcim.6c03105).
+
+The article is open access. Use GitHub's **Cite this repository** button to copy the citation in BibTeX or APA format.
+
 ## Repository Structure
 
 ```text
